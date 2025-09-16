@@ -47,12 +47,12 @@
             <button id="online-coaching-btn" class="nav-button kaizen-green text-white font-semibold py-2 px-4 sm:px-6 rounded-lg shadow-lg">
                 Online Coaching
             </button>
-            <button id="month-to-month-btn" class="nav-button kaizen-green-text border-2 kaizen-green-border font-semibold py-2 px-4 sm:px-6 rounded-lg hover:bg-[#00bf63] hover:text-white">
+            <a href="https://kaizeninnovations.github.io/BodyWorksMonthly/" target="_blank" rel="noopener noreferrer" class="nav-button kaizen-green-text border-2 kaizen-green-border font-semibold py-2 px-4 sm:px-6 rounded-lg hover:bg-[#00bf63] hover:text-white">
                 Month to Month
-            </button>
-            <button id="paid-in-full-btn" class="nav-button kaizen-green-text border-2 kaizen-green-border font-semibold py-2 px-4 sm:px-6 rounded-lg hover:bg-[#00bf63] hover:text-white">
+            </a>
+            <a href="https://kaizeninnovations.github.io/BodyWorksPIF/" target="_blank" rel="noopener noreferrer" class="nav-button kaizen-green-text border-2 kaizen-green-border font-semibold py-2 px-4 sm:px-6 rounded-lg hover:bg-[#00bf63] hover:text-white">
                 Paid in Full
-            </button>
+            </a>
         </nav>
 
         <!-- Main Content Area -->
@@ -130,59 +130,13 @@
                     </div>
                 </div>
             </div>
-
-            <!-- Placeholder for Month to Month Section -->
-            <div id="month-to-month-content" class="hidden">
-                 <div class="bg-gray-900/50 border border-gray-700 rounded-xl p-8 max-w-md mx-auto">
-                    <h2 class="text-3xl font-bold mb-4">Month to Month Plans</h2>
-                    <p class="text-gray-300">Content for the month-to-month plans will be displayed here. Check back soon for updates!</p>
-                </div>
-            </div>
-
-            <!-- Placeholder for Paid in Full Section -->
-            <div id="paid-in-full-content" class="hidden">
-                <div class="bg-gray-900/50 border border-gray-700 rounded-xl p-8 max-w-md mx-auto">
-                    <h2 class="text-3xl font-bold mb-4">Paid in Full Options</h2>
-                    <p class="text-gray-300">Details about our paid-in-full discounts and options will be available here shortly.</p>
-                </div>
-            </div>
-
+            <!-- The placeholder content for the other buttons has been removed as they now redirect to other pages. -->
         </main>
     </div>
 
-    <script>
-        // --- Tab Navigation Logic ---
-        const buttons = [
-            { id: 'online-coaching-btn', contentId: 'online-coaching-content' },
-            { id: 'month-to-month-btn', contentId: 'month-to-month-content' },
-            { id: 'paid-in-full-btn', contentId: 'paid-in-full-content' },
-        ];
-
-        buttons.forEach(buttonInfo => {
-            const buttonEl = document.getElementById(buttonInfo.id);
-            buttonEl.addEventListener('click', () => {
-                // Hide all content
-                buttons.forEach(b => document.getElementById(b.contentId).classList.add('hidden'));
-
-                // Deactivate all buttons
-                buttons.forEach(b => {
-                    const btn = document.getElementById(b.id);
-                    btn.classList.remove('kaizen-green', 'text-white');
-                    btn.classList.add('kaizen-green-text', 'border-2', 'kaizen-green-border');
-                });
-
-                // Show selected content
-                document.getElementById(buttonInfo.contentId).classList.remove('hidden');
-                
-                // Activate selected button
-                buttonEl.classList.add('kaizen-green', 'text-white');
-                buttonEl.classList.remove('kaizen-green-text', 'border-2', 'kaizen-green-border');
-            });
-        });
-    </script>
+    <!-- The script has been removed as it is no longer needed. The links are now standard HTML <a> tags. -->
 
 </body>
 </html>
-
 
 
